@@ -1,8 +1,8 @@
-class Flat
-  def execute(array, flat_array=[])
-    array.each do |elem|
+class Array
+  def intercon_flat(flat_array=[])
+    self.each do |elem|
       if elem.is_a?(Array)
-        flat_array = execute(elem,flat_array)
+        flat_array = elem.intercon_flat(flat_array)
       else
         flat_array.push(elem)
       end
