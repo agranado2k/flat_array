@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative "../lib/flat"
+
+array = ARGV[0]
+
+if array.nil?
+  p "There is no array"
+  return 0
+end
+array = eval(array)
+$stdout << array.intercon_flat << "\n"
+
